@@ -4,7 +4,8 @@
 // Insertion Sort
 // Created by ShiJiahuan on 11/11/2016.
 // Copyright ©️ 2016 ShiJiahuan. All rights reserved.
-//#include <algorithm>
+//
+#include <algorithm>
 #include <cstdio>
 #include <iostream>
 using namespace std;
