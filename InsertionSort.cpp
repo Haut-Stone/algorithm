@@ -23,7 +23,7 @@ int *insertionSort(int preArray[], int length) {
   }
   return preArray;
 }
-int int main(int argc, char const *argv[]) {
+int main(int argc, char const *argv[]) {
   int preArray[] = {2, 1, 4, 3, 6, 5, 2333, 233, 23};
   int length = sizeof(preArray) / sizeof(preArray[0]);
   int *sortedArray = insertionSort(preArray, length);
