@@ -7,8 +7,11 @@
 * @Author: Haut-Stone
 * @Date:   2017-01-17 14:15:44
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-01-17 15:25:47
+* @Last Modified time: 2017-04-18 21:37:13
 */
+
+//在main函数中用邻接矩阵存好图后，直接调用该函数即可。
+
 #include <iostream>
 #include <cstdio>
 #include <algorithm>
@@ -16,61 +19,47 @@
 #include <cstring>
 using namespace std;
 
-//以第一个点为起点的迪杰斯特拉算法
-int main(void)
-{
-	int e[10][10], dis[10], book[10], i, j, n, m, t1, t2, t3, u, v, min;
-	int inf = 99999999;//用来代替正无穷
-	scanf("%d %d", &n, &m);
+const int N = 110;//根据题目要求更该合适的数值
+const int INF = 99999999;
+//需要在main中读取的值
+int iMap[N][N];
+int vertexs;
+int beginX = 1;//开始点的位置，一般为1
 
-	for(i=1;i<=n;i++){
-		for(j=1;j<=n;j++){
-			if(i == j){
-				e[i][j] = 0;
-			}else{
-				e[i][j] = inf;
-			}
-		}
+//仅dijkstra中用到的
+int vis[N];
+int dis[N];
+
+void dijkstra()
+{	
+	int min;
+	int minVertex;
+	int ans = -1;
+
+	for(int i=1;i<=vertexs;i++){
+		dis[i] = iMap[beginX][i];
+		vis[i] = 0;
 	}
 
-	for(i=1;i<=m;i++){
-		scanf("%d %d %d", &t1, &t2, &t3);
-		e[t1][t2] = t3;
-	}
+	vis[beginX] = 1;
 
-	for(i=1;i<=n;i++){
-		dis[i] = e[1][i];
-	}
-
-	for(i=1;i<=n;i++){
-		book[i] = 0;
-	}
-	book[1] = 1;
-
-
-	//核心算法
-	for(i=1;i<=n-1;i++){
-		min = inf;
-		for(j=1;j<=n;j++){
-			if(book[j] == 0 && dis[j] < min){
+	for(int i=1;i<=vertexs-1;i++){//搜遍所有的点
+		min = INF;
+		for(int j=1;j<=vertexs;j++){//找距出发点距离最近的点
+			if(dis[j] < min && vis[j] == 0){
 				min = dis[j];
-				u = j;
+				minVertex = j;
 			}
 		}
-		book[u] = 1;
-		for(v=1;v<=n;v++){
-			if(e[u][v] < inf){
-				if(dis[v] > dis[u] + e[u][v]){
-					dis[v] = dis[u] + e[u][v];
-				}
+		vis[minVertex]  = 1;
+		for(int j=1;j<=vertexs;j++){
+			if(iMap[minVertex][j] < INF){
+				if(dis[minVertex] + iMap[minVertex][j] < dis[j]) dis[j] = dis[minVertex] + iMap[minVertex][j];
 			}
 		}
 	}
-
-	//输出
-	for(i=1;i<=n;i++){
-		printf("%d ", dis[i]);
-	}
-
-    return 0;
+	//找出符合一定条件的ans后输出
+	//.....这里写条件
+	printf("%d\n", ans);
+	return;
 }
