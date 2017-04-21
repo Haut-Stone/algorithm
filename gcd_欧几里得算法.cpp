@@ -7,8 +7,12 @@
 * @Author: Haut-Stone
 * @Date:   2016-12-23 21:37:44
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2016-12-23 21:41:32
+* @Last Modified time: 2017-04-20 16:24:05
 */
+
+//欧几里得算法
+
+
 
 #include <iostream>
 #include <cstdio>
@@ -34,14 +38,12 @@ int main(void)
     return 0;
 }
 
+//用于求a, b的最大公约数。
 int gcd(int a, int b)
 {
-        int c = a % b;
-        while(c)
-        {
-                a = b;
-                b = c;
-                c = a % b;
-        }
-        return b;
+    if(b == 0){
+        return a;
+    }else{
+        return gcd(b, a%b);
+    }
 }
