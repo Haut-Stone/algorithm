@@ -9,11 +9,24 @@
 //  Copyright © 2016年 SJH. All rights reserved.
 //
 
-#include <iostream>
 #include <algorithm>
+#include <iostream>
+#include <cstring>
+#include <vector>
+#include <cstdio>
+#include <queue>
+#include <stack>
+#include <cmath>
+#include <map>
+#include <set>
 using namespace std;
-int a[4][4] = {{1}, {2,2}, {3, 5, 3},{1,1,1,1}};
-int dp[4][4] = {0};
+
+#define INPUT_TEST freopen("in.txt", "r", stdin)
+
+const int N = 110;
+
+int a[N][N];
+int dp[N][N];
 
 int fun(int x,int y,int base)
 {
@@ -26,11 +39,19 @@ int fun(int x,int y,int base)
         return dp[x][y];
     }
 }
-int main(int argc, char const *argv[])
+
+int main(void)
 {
+    // INPUT_TEST;
     int result;
-    int base = 3;
-    result = fun(0,0,base);
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<=i;j++){
+            scanf("%d", &a[i][j]);
+        }
+    }   
+    result = fun(0,0,n);
     printf("%d\n", result);
     return 0;
 }

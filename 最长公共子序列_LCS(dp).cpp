@@ -14,7 +14,7 @@ char ans[LEN];
 int ptr = 0;
 int monitor(int n, int m);
 
-int main(int argc, char const *argv[])
+int main(void)
 {
     scanf("%s", strA);
     scanf("%s", strB);

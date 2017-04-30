@@ -7,7 +7,7 @@
 * @Author: Haut-Stone
 * @Date:   2017-04-20 19:08:52
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-04-20 19:08:52
+* @Last Modified time: 2017-04-25 21:17:23
 */
 #include <algorithm>
 #include <iostream>
@@ -22,6 +22,11 @@
 using namespace std;
 
 #define INPUT_TEST freopen("in.txt", "r", stdin)
+
+int bfs()
+{
+	
+}
 
 int main(void)
 {

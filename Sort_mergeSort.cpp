@@ -35,7 +35,7 @@ void mergesort(int *a, int low, int high){
         mid = (low+high)/2;
         mergesort(a, low, mid);
         mergesort(a, mid+1, high);
-        mergesort(a, low, high, mid);
+        // mergesort(a, low, high, mid);
     }
     return ;
 }

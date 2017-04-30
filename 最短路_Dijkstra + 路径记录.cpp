@@ -7,20 +7,19 @@
 * @Author: Haut-Stone
 * @Date:   2017-01-17 14:15:44
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-04-21 14:09:36
+* @Last Modified time: 2017-04-23 15:01:38
 */
 
 const int N = 110;
 const int INF = 99999999;
 
-//仅dijkstra中用到的
 int vis[N];
 int dis[N];
-
+int pre[N];//记录路径的数组
 
 int iMap[N][N];
 int vertexs;
-int edges;//这里有个玄学问题，如果edges 放在vis[N],之前的话程序无法运行。。
+int edges;
 
 
 void init()
@@ -46,6 +45,7 @@ int dijkstra(int beginX, int endX)
 	for(int i=1;i<=vertexs;i++){
 		dis[i] = iMap[beginX][i];
 		vis[i] = 0;
+		pre[i] = dis[i] != INF && i != beginX ? beginX : -1;//想将所有有链接的点的前一个点，设为出发点
 	}
 
 	dis[beginX] = 0;
@@ -67,6 +67,7 @@ int dijkstra(int beginX, int endX)
 			if(iMap[u][v] < INF){
 				if(dis[u] + iMap[u][v] < dis[v]){
 					 dis[v] = dis[u] + iMap[u][v];
+					 pre[v] = u;
 				}
 			}
 		}

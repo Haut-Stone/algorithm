@@ -35,7 +35,7 @@ void quick_Sort(int *arr, int left, int right) {
     quick_Sort(arr, i, right);
   }
 }
-int int main(int argc, char const *argv[]) {
+int main(int argc, char const *argv[]) {
   int arr[] = {1, 3, 2, 5, 4, 23, 123, 1, 3};
   int length = sizeof(arr) / sizeof(arr[0]);
   quick_Sort(arr, 0, length - 1);
