@@ -7,7 +7,7 @@
 * @Author: Haut-Stone
 * @Date:   2017-04-20 23:09:35
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-04-20 23:17:19
+* @Last Modified time: 2017-05-02 21:31:33
 */
 
 //第一次打个人赛的时候就因为这个东西，跪了一道题。还是记一下吧，平时也挺有用的╮(￣▽￣"")╭
@@ -15,14 +15,6 @@
 
 #include <algorithm>
 #include <iostream>
-#include <cstring>
-#include <vector>
-#include <cstdio>
-#include <queue>
-#include <stack>
-#include <cmath>
-#include <map>
-#include <set>
 using namespace std;
 
 #define INPUT_TEST freopen("in.txt", "r", stdin)

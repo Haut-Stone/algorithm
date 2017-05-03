@@ -7,7 +7,7 @@
 * @Author: Haut-Stone
 * @Date:   2017-01-16 18:14:18
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-04-28 17:19:45
+* @Last Modified time: 2017-05-02 21:24:40
 */
 
 //以O(n)的复杂读求解最大回文字串
@@ -15,9 +15,6 @@
 
 
 #include <iostream>
-#include <cstdio>
-#include <algorithm>
-#include <cmath>
 #include <cstring>
 using namespace std;
 

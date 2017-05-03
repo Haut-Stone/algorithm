@@ -7,13 +7,10 @@
 * @Author: Haut-Stone
 * @Date:   2016-12-23 21:37:44
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-04-20 16:24:05
+* @Last Modified time: 2017-05-02 21:31:33
 */
 
 //欧几里得算法
-
-
-
 #include <iostream>
 #include <cstdio>
 #include <algorithm>

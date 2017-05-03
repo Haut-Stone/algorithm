@@ -23,7 +23,7 @@ using namespace std;
 
 #define INPUT_TEST freopen("in.txt", "r", stdin)
 
-const int N = 110;
+const int N = 500;
 
 int a[N][N];
 int dp[N][N];
@@ -44,14 +44,15 @@ int main(void)
 {
     // INPUT_TEST;
     int result;
+
     int n;
     cin>>n;
-    for(int i=0;i<n;i++){
-        for(int j=0;j<=i;j++){
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=i;j++){
             scanf("%d", &a[i][j]);
         }
     }   
-    result = fun(0,0,n);
+    result = fun(1,1,n);
     printf("%d\n", result);
     return 0;
 }

@@ -7,18 +7,10 @@
 * @Author: Haut-Stone
 * @Date:   2017-03-31 19:04:34
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-03-31 19:21:03
+* @Last Modified time: 2017-05-02 21:24:35
 */
 #include <algorithm>
 #include <iostream>
-#include <cstring>
-#include <vector>
-#include <cstdio>
-#include <queue>
-#include <stack>
-#include <cmath>
-#include <map>
-#include <set>
 using namespace std;
 
 const int N = 100;
