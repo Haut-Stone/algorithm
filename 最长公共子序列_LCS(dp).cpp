@@ -1,9 +1,19 @@
-#include <cstdio>
+/*
+* Created by ShiJiahuan(li) in haut.
+* for more please visit www.shallweitalk.com
+* 
+* Copyright 2016 SJH. All rights reserved.
+*
+* @Author: Haut-Stone
+* @Date:   2017-01-16 18:14:18
+* @Last Modified by:   Haut-Stone
+* @Last Modified time: 2017-05-06 17:47:54
+*/
+
+//LCS
+//求最长公共子序列
+
 #include <iostream>
-#include <algorithm>
-#include <cmath>
-#include <cstring>
-#include <cstdlib>
 #define LEN 100
 using namespace std;
 

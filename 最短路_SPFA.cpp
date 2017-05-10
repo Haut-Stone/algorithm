@@ -7,11 +7,10 @@
 * @Author: Haut-Stone
 * @Date:   2017-04-19 13:24:51
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-04-19 20:42:50
+* @Last Modified time: 2017-05-06 17:47:54
 */
 
 //即经过队列优化的Bellman-ford算法
-//
 
 #include <queue>
 using namespace std;

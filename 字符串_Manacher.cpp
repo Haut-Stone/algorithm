@@ -7,12 +7,11 @@
 * @Author: Haut-Stone
 * @Date:   2017-01-16 18:14:18
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-05-02 21:24:40
+* @Last Modified time: 2017-05-06 17:41:44
 */
 
-//以O(n)的复杂读求解最大回文字串
+//以O(n)的复杂读求解最大回子串
 //马儿拉呀拉，拉呀拉，拉呀拉了个车Σ(￣。￣ﾉ)ﾉ
-
 
 #include <iostream>
 #include <cstring>
@@ -32,7 +31,7 @@ int init();
 int main(void)
 {
 	int ans = 0;
-	scanf("%s", Str);//根据题目情况，可以改晨gets()
+	scanf("%s", Str);//根据题目情况，可以改成gets()
 	len1 = strlen(Str);
 	init();
 	ans = manacher();
