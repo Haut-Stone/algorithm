@@ -7,7 +7,7 @@
 * @Author: Haut-Stone
 * @Date:   2017-01-16 18:14:18
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-05-06 17:47:54
+* @Last Modified time: 2017-05-16 17:13:53
 */
 
 //LCS
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #define LEN 100
+#define INPUT_TEST freopen("in.txt", "r", stdin)
 using namespace std;
 
 int dp[LEN][LEN];
@@ -26,6 +27,8 @@ int monitor(int n, int m);
 
 int main(void)
 {
+    INPUT_TEST;
+    
     scanf("%s", strA);
     scanf("%s", strB);
     int lengthOfA = (int)strlen(strA);
