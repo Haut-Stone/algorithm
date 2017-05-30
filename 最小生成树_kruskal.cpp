@@ -7,8 +7,12 @@
 * @Author: Haut-Stone
 * @Date:   2017-03-31 19:05:05
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-05-02 21:24:37
+* @Last Modified time: 2017-05-25 19:49:28
 */
+
+//注意第一个节点的序号是1
+//
+
 #include <algorithm>
 #include <iostream>
 using namespace std;
@@ -21,15 +25,15 @@ int edgeNumber;
 
 struct Edge
 {
-	int begin;
-	int end;
-	int distance;
-}edges[N*N];
+	int u;
+	int v;
+	int w;
+}edge[N*N];
 
 //比较函数
 bool cmp(Edge a, Edge b)
 {	
-	return a.distance < b.distance;
+	return a.w < b.w;
 }
 
 //并查集的查找
@@ -45,7 +49,7 @@ int find(int x)
 //初始化并查集
 void init()
 {
-	for(int i=1;i<=LEN;i++){//相当于声明了27个没有叶子的树。
+	for(int i=1;i<=LEN;i++){
 		parents[i] = i;
 	}
 	return;
@@ -65,14 +69,14 @@ bool hadUnite(int x, int y)
 
 int kruskal()
 {
-	sort(edges+1, edges+1+edgeNumber, cmp);
+	sort(edge, edge+edgeNumber, cmp);
 	init();
 	int ans = 0;
-	for(int i=1;i<=edgeNumber;i++){
-		if(hadUnite(edges[i].begin, edges[i].end)){
+	for(int i=0;i<edgeNumber;i++){
+		if(hadUnite(edge[i].u, edge[i].v)){
 			continue;
 		}else{
-			ans += edges[i].distance;//这里在hadUnite函数里已经合并过了。这里不用再合并。
+			ans += edge[i].w;//这里在hadUnite函数里已经合并过了。这里不用再合并。
 		}
 	}
 	return ans;

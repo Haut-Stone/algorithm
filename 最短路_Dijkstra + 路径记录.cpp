@@ -7,7 +7,7 @@
 * @Author: Haut-Stone
 * @Date:   2017-01-17 14:15:44
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-04-23 15:01:38
+* @Last Modified time: 2017-05-26 18:33:34
 */
 
 const int N = 110;
@@ -16,11 +16,9 @@ const int INF = 99999999;
 int vis[N];
 int dis[N];
 int pre[N];//记录路径的数组
-
 int iMap[N][N];
 int vertexs;
 int edges;
-
 
 void init()
 {
@@ -34,7 +32,6 @@ void init()
 		}
 	}
 }
-
 
 int dijkstra(int beginX, int endX)
 {	
@@ -51,7 +48,7 @@ int dijkstra(int beginX, int endX)
 	dis[beginX] = 0;
 	vis[beginX] = 1;
 
-	for(int i=1;i<=vertexs-1;i++){//搜遍所有的点
+	for(int i=1;i<=vertexs;i++){//搜遍所有的点，每次确定到一个点的最短距离。
 		min = INF;
 		for(int j=1;j<=vertexs;j++){//找距出发点距离最近的点
 			if(dis[j] < min && !vis[j]){
@@ -63,6 +60,7 @@ int dijkstra(int beginX, int endX)
 		vis[minVertex]  = 1;
 
 		int u = minVertex;
+		//松弛
 		for(int v=1;v<=vertexs;v++){
 			if(iMap[u][v] < INF){
 				if(dis[u] + iMap[u][v] < dis[v]){

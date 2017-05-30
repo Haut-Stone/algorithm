@@ -7,8 +7,10 @@
 * @Author: Haut-Stone
 * @Date:   2017-04-18 21:38:13
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-04-20 13:55:16
+* @Last Modified time: 2017-05-28 11:04:25
 */
+
+//有种动态规划的思想，按点的编号，松弛求的最短路径。
 
 const int N = 100;
 const int INF = 99999999;
