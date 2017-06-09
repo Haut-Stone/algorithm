@@ -7,7 +7,7 @@
 * @Author: Haut-Stone
 * @Date:   2017-04-20 19:08:52
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-05-23 19:36:10
+* @Last Modified time: 2017-06-09 09:04:45
 */
 
 //这个示例是二维地图bfs的大致步骤
@@ -33,7 +33,14 @@ struct Node
 	int x;
 	int y;
 	int steps;
+	Node(){};
+	Node(int X, int Y, int STEPS){
+		x = X;
+		y = Y;
+		steps = STEPS;
+	}
 };
+
 
 int num;
 int row, col;
@@ -45,11 +52,7 @@ int bfs(int beginX, int beginY)
 	memset(book, 0 ,sizeof(book));
 	queue<Node> Q;
 
-	Node solo;
-	solo.x = beginX;
-	solo.y = beginY;
-	solo.steps = 0;
-
+	Node solo(beginX, beginY, 0);
 	Q.push(solo);
 	book[solo.x][solo.y] = 1;
 
@@ -62,10 +65,7 @@ int bfs(int beginX, int beginY)
 			int dy = solo.y + direction[i][1];
 			//如果该点合法	，加入队列
 			if(dx >= 0 && dy >= 0 && dx <= row && dy <= col){
-				Node temp;
-				temp.x = dx;
-				temp.y = dy;
-				temp.steps = solo.steps + 1;
+				Node temp(dx, dy, solo.steps+1);
 				book[temp.x][temp.y] = 1;
 				Q.push(temp);
 			}
