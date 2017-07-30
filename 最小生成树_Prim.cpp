@@ -7,7 +7,7 @@
 * @Author: Haut-Stone
 * @Date:   2017-03-31 19:04:34
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-05-25 19:17:46
+* @Last Modified time: 2017-07-28 19:23:35
 */
 #include <algorithm>
 #include <iostream>
@@ -20,6 +20,20 @@ int Imap[N][N];//第一个点的编号从零开始！！
 int minCost[N];
 bool vis[N];
 int vertexNumber;
+
+void init()
+{
+	for(int i=0;i<N;i++){
+		for(int j=0;j<N;j++){
+			if(i == j){
+				Imap[i][j] = 0;
+			}else{
+				Imap[i][j] = INF;
+			}
+		}
+	}
+}
+
 
 int prim()
 {
