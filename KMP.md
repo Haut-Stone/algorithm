@@ -123,7 +123,7 @@ next数组中next[8]记录的便是ABC`上一次`出现的位置的尾坐标。
 
 ```
 
-另外这一值得一提的是，对于`优化后`的nextval[]数组，记录的是已匹配好的字串`最早`出现的位置。
+另外这一值得一提的是，对于`优化后`的nextval[]数组，记录的是已匹配好的子串`最早`出现的位置。
 
 ## coding
 
@@ -156,7 +156,7 @@ bool kmp(char text[], char pattern[])
     int j = -1;
     for(int i=0;i < n;i++){
         while(j != -1 && text[i] != pattern[j+1]){
-            j = my_next[j];
+            j = my_next[j];//同样的更合理的回退过程
         }
         if(text[i] == pattern[j+1]){
             j++;
@@ -179,7 +179,9 @@ int main(void)
 
 ## 总结
 
-	wait...... 
+	KMP算法和核心就是这个next数组，要注意他的逻辑意义和实现意义是不同的要分清楚。同时平时做题的时候，除了基本的裸KMP，很多题目都是在用next数组存下来的关系求解，理解next数组很关键。
+
+如果还是不懂的话。可以靠这道题加深理解[](https://github.com/Haut-Stone/ACM/blob/master/字符串/🥇字符串_KMP_next数组理解_CyclicNacklace.md)
 
 ## 参考 && 感谢
 [阮一峰KMP算法](http://www.ruanyifeng.com/blog/2013/05/Knuth–Morris–Pratt_algorithm.html)
