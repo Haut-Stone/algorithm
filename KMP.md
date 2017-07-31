@@ -181,7 +181,8 @@ int main(void)
 
 	KMP算法和核心就是这个next数组，要注意他的逻辑意义和实现意义是不同的要分清楚。同时平时做题的时候，除了基本的裸KMP，很多题目都是在用next数组存下来的关系求解，理解next数组很关键。
 
-如果还是不懂的话。可以靠这道题加深理解[](https://github.com/Haut-Stone/ACM/blob/master/字符串/🥇字符串_KMP_next数组理解_CyclicNacklace.md)
+如果还是不懂的话。可以靠这道题加深理解
+[](https://github.com/Haut-Stone/ACM/blobmaster字符串🥇字符串_KMP_next数组理解_CyclicNacklace.m)
 
 ## 参考 && 感谢
 [阮一峰KMP算法](http://www.ruanyifeng.com/blog/2013/05/Knuth–Morris–Pratt_algorithm.html)
