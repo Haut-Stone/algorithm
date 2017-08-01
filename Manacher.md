@@ -105,6 +105,8 @@ $ # a # b # a # b # *
 就要从lastPos处截断。如果3处‘#’拥有的半径小于lastPos，那么5处‘#’便和3处‘#’拥有同样的性质，即
 同样的回文半径。
 
+## 习题
+[最长回文](http://acm.hdu.edu.cn/showproblem.php?pid=3068)
 
 ## 总结
 
