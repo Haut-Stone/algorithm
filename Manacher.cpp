@@ -7,10 +7,10 @@
 * @Author: Haut-Stone
 * @Date:   2017-01-16 18:14:18
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-05-06 17:41:44
+* @Last Modified time: 2017-08-01 15:49:18
 */
 
-//以O(n)的复杂读求解最大回子串
+//以O(n)的复杂读求解最大回文子串
 //马儿拉呀拉，拉呀拉，拉呀拉了个车Σ(￣。￣ﾉ)ﾉ
 
 #include <iostream>
