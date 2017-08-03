@@ -7,7 +7,7 @@
 * @Author: Haut-Stone
 * @Date:   2017-08-02 14:23:09
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-08-02 14:23:26
+* @Last Modified time: 2017-08-02 16:41:01
 */
 
 #include <algorithm>
@@ -22,10 +22,12 @@ const int ALPHABET_SIZE = 26;
 
 struct Node
 {
+	// int id;
 	int isLast;
 	Node* fail;
 	Node* children[ALPHABET_SIZE];
 	Node(){
+		// id = 0;
 		isLast = 0;
 		fail = NULL;
 		for(int i=0;i<ALPHABET_SIZE;i++){
@@ -35,12 +37,13 @@ struct Node
 };
 
 Node* root;
+// int idNumber = 1;
 
 void insert(char pattern[])
 {
 	Node* current;
 	Node* temp;
-	int len = strlen(pattern);
+	int len = (int)strlen(pattern);
 	current = root;
 	for(int i=0;i<len;i++){
 		int tempChar = pattern[i] - 'a';
@@ -48,6 +51,7 @@ void insert(char pattern[])
 			temp = new Node;
 			current->children[tempChar] = temp;
 			current = current->children[tempChar];
+			// current->id = idNumber++;
 		}else{
 			current = current->children[tempChar];
 		}
@@ -75,17 +79,20 @@ void initFailPointer()
 			if(son != NULL){
 				if(father == root){
 					son->fail = root;
+					// printf("%d---->root\n", son->id);
 				}else{
 					fatherFail = father->fail;
 					while(fatherFail != NULL){
 						if(fatherFail->children[i] != NULL){
 							son->fail = fatherFail->children[i];
+							// printf("%d---->%d\n", son->id, fatherFail->children[i]->id);							
 							break;
 						}
 						fatherFail = fatherFail->fail;
 					}
 					if(fatherFail == NULL){
 						son->fail = root;
+						// printf("%d---->root\n", son->id);
 					}
 				}
 				Q.push(son);
@@ -99,7 +106,7 @@ int query(char text[])
 	Node* current;
 	Node* temp;
 	int numberOfPatternsInText = 0;
-	int textLen = strlen(text);
+	int textLen = (int)strlen(text);
 	current = root;
 
 	for(int i=0;i<textLen;i++){
