@@ -7,7 +7,7 @@
 * @Author: Haut-Stone
 * @Date:   2017-08-02 14:23:09
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-08-02 16:41:01
+* @Last Modified time: 2017-08-03 09:35:18
 */
 
 #include <algorithm>
@@ -41,20 +41,15 @@ Node* root;
 
 void insert(char pattern[])
 {
-	Node* current;
-	Node* temp;
+	Node* current = root;
 	int len = (int)strlen(pattern);
-	current = root;
 	for(int i=0;i<len;i++){
 		int tempChar = pattern[i] - 'a';
 		if(current->children[tempChar] == NULL){
-			temp = new Node;
-			current->children[tempChar] = temp;
-			current = current->children[tempChar];
+			current->children[tempChar] = new Node;
 			// current->id = idNumber++;
-		}else{
-			current = current->children[tempChar];
 		}
+		current = current->children[tempChar];
 	}
 	(current->isLast)++;
 }
