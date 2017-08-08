@@ -7,7 +7,7 @@
 * @Author: Haut-Stone
 * @Date:   2016-12-23 21:37:44
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-05-02 21:31:33
+* @Last Modified time: 2017-08-05 16:27:32
 */
 
 //欧几里得算法
@@ -36,6 +36,7 @@ int main(void)
 }
 
 //用于求a, b的最大公约数。
+//
 int gcd(int a, int b)
 {
     if(b == 0){
