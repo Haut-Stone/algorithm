@@ -108,6 +108,9 @@ $ # a # b # a # b # *
 ## 习题
 [最长回文](http://acm.hdu.edu.cn/showproblem.php?pid=3068)
 
+## 参考
+[非常浅显易懂，而且有配图](https://segmentfault.com/a/1190000003914228)
+
 ## 总结
 
 	wait...... 
