@@ -7,7 +7,7 @@
 * @Author: Haut-Stone
 * @Date:   2017-07-31 15:12:11
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-07-31 16:27:52
+* @Last Modified time: 2017-08-19 14:30:15
 */
 
 //
@@ -49,6 +49,7 @@ void getNext(string & T, int & m, int next[])
 		}
 	}
 }
+
 void getExtend(string & S, int & n, string & T, int & m, int extend[], int next[])
 {
 	int firstPos = 0;
