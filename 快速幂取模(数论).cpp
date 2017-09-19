@@ -7,7 +7,7 @@
 * @Author: Haut-Stone
 * @Date:   2017-01-16 18:14:18
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-08-05 19:17:11
+* @Last Modified time: 2017-09-18 21:24:17
 */
 
 //快速幂。但是并不是矩阵快速幂
@@ -33,4 +33,4 @@ int main()
 	while(cin>>a>>b>>c){
 		cout<<PowerMod(a,b,c)<<endl;
 	}    
-}
+} 
