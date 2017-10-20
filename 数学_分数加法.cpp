@@ -7,14 +7,13 @@
 * @Author: Haut-Stone
 * @Date:   2017-04-28 08:43:38
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-05-02 21:31:34
+* @Last Modified time: 2017-10-17 20:39:30
 */
 
 #include <iostream>
 using namespace std;
 #define ll long long
 const int N = 100;
-
 struct Fraction
 {
 	ll up;
