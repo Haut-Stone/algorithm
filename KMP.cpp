@@ -7,7 +7,7 @@
 * @Author: Haut-Stone
 * @Date:   2017-04-25 21:29:00
 * @Last Modified by:   Haut-Stone
-* @Last Modified time: 2017-07-31 11:51:47
+* @Last Modified time: 2017-10-30 10:00:47
 */
 
 //这里先写一份注释吧，其实KMP算是实际上就是，利用相同部分的前缀和后缀，从而掉过了重复查找的部分。
@@ -44,8 +44,12 @@ void getNext(char str[], int len)
 	}
 }
 
+/*
+	！！单单是统计次数的话，只用把有ans的行取消掉注释就好了！！
+*/
 bool kmp(char text[], char pattern[])
 {
+	
 	// int lastPos = -1;
 	// int ans = 0;
 	int n = (int)strlen(text);
